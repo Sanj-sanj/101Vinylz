@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -14,10 +15,12 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Navigation />
-    <div class="flex items-center flex-col">
+    <div
+      class="flex items-center flex-col min-h-[100vh] md:min-h-[92vh] relative"
+    >
+      <Navigation />
       <slot />
+      <Footer />
     </div>
-    <footer>Developed with Astro!</footer>
   </body>
 </html>
