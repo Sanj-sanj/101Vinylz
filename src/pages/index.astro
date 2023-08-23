@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Gallery from "../components/Gallery.astro";
+
+console.log("hi to the node env");
 ---
 
 <BaseLayout pageTitle="101VinylZ - Home Page">
@@ -11,8 +14,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     >
   </h2>
 
-  <p>We make custom decals too!</p>
-  <p>Check out our Etsy shop to view our catalogue.</p>
+  <main class="flex flex-col items-center w-full px-3 text-center">
+    <p>
+      From cars to computers to windows. Our vinyls come in different shapes and
+      colour. Highly durable for indoor or outdoor use.
+    </p>
+    <img src="/square_logo.webp" alt="" srcset="" class="w-1/2 md:w-4/12" />
+    <p>Easy to apply to any surface.</p>
+    <p>We make custom decals too!</p>
+    <p>Check out our Etsy shop to view our catalogue.</p>
+    <br />
+    <h2 class="text-xl">
+      <span class="text-red-500">G</span><span class="text-orange-500">A</span
+      ><span class="text-red-500">L</span>ler<span class="text-purple-500"
+        >Y</span
+      >
+    </h2>
+    <hr class="w-52" />
+    <Gallery />
+  </main>
 </BaseLayout>
 
 <style>
