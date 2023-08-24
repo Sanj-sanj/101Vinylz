@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 const images = await Astro.glob("../assets/*").then((files) =>
   files.map((file) => file.default),
 );
-console.log(images);
 ---
 
 <div class="w-10/12">
