@@ -10,16 +10,20 @@ import EtsyIcon from "../../public/etsy-icon.svg";
 ---
 
 <BaseLayout pageTitle="101VinylZ - Home Page">
-  <SiteTitleColorsTag text="101VINYLZ" />
-
-  <main class="flex flex-col items-center w-full text-center">
+  <main class="flex flex-col items-center w-full text-center text-stone-200">
+    <span class="mt-2">
+      <SiteTitleColorsTag text="101VINYLZ" textColor="white" />
+    </span>
     <!-- HERO AREA -->
     <section class="p-4">
       <p>
         From cars to computers to windows. Our vinyls come in different shapes
         and colour. Highly durable for indoor or outdoor use.
       </p>
-      <img src="/square_logo.webp" alt="" srcset="" class="w-1/2 md:w-4/12" />
+
+      <div class="flex justify-center w-full h-44">
+        <img src="/square_logo.webp" alt="" srcset="" class="w-1/2 md:w-4/12" />
+      </div>
       <p>Easy to apply to any surface.</p>
       <p>We make custom decals too!</p>
       <p>Check out our Etsy shop to view our catalogue.</p>
@@ -28,7 +32,7 @@ import EtsyIcon from "../../public/etsy-icon.svg";
 
     <!-- GALLERY -->
     <section class="p-4">
-      <SiteTitleColorsTag text="GALLERY" />
+      <SiteTitleColorsTag text="GALLERY" textColor="'white" />
       <hr class="w-52" />
       <Gallery />
       <br />
