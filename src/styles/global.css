@@ -3,3 +3,19 @@
   font-family: "Bushidoo";
   src: url("/fonts/JDK\ Bushidoo.ttf") format("truetype");
 }
+::-webkit-scrollbar {
+  width: 0.45em;
+  height: 0.45em;
+}
+::-webkit-scrollbar-track {
+  background: #3a3a3a;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb {
+  background: #727272;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5f5f5f;
+  border-radius: 2em;
+}

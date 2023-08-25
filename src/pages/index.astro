@@ -1,48 +1,71 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
+
 import SiteTitleColorsTag from "../components/SiteTitleColorsTag.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Gallery from "../components/Gallery.astro";
-import { Image } from "astro:assets";
 
 import InstaIcon from "../../public/insta.svg";
 import EtsyIcon from "../../public/etsy-icon.svg";
+import HeroImage2 from "../../public/vladislav-klapin-splash.jpg";
 ---
 
 <BaseLayout pageTitle="101VinylZ - Home Page">
   <main class="flex flex-col items-center w-full text-center text-stone-200">
-    <span class="mt-2">
-      <SiteTitleColorsTag text="101VINYLZ" textColor="white" />
-    </span>
     <!-- HERO AREA -->
-    <section class="p-4">
-      <p>
-        From cars to computers to windows. Our vinyls come in different shapes
-        and colour. Highly durable for indoor or outdoor use.
-      </p>
-
-      <div class="flex justify-center w-full h-44">
-        <img src="/square_logo.webp" alt="" srcset="" class="w-1/2 md:w-4/12" />
-      </div>
+    <div
+      class="flex justify-center min-h-[37em] lg:h-[46rem] relative border-b-2 border-stone-700"
+    >
+      <Image
+        src={HeroImage2}
+        alt="Image of a vinyl decal - Artist: Vladislav Klapin - Unsplash"
+        quality="low"
+        class="object-cover"
+      />
+      <span
+        class="mt-2 absolute text-7xl top-20 -rotate-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+      >
+        <SiteTitleColorsTag text="101VINYLZ" textColor="white" />
+      </span>
+      <span class="absolute bottom-10 p-2">
+        <p>From cars to computers to windows.</p>
+        <p>
+          Our vinyls come in different shapes and colour. Highly durable for
+          indoor or outdoor use.
+        </p>
+      </span>
+    </div>
+    <section class="p-4 pb-2">
       <p>Easy to apply to any surface.</p>
-      <p>We make custom decals too!</p>
-      <p>Check out our Etsy shop to view our catalogue.</p>
-      <br />
+      <a href="https://www.etsy.com/shop/101vinylz">
+        <button
+          class="bg-base-pink p-4 my-4 rounded outline hover:bg-base-magenta active:bg-base-light-purp"
+          title="View our store"
+        >
+          Browse our Shop!</button
+        >
+      </a>
     </section>
 
     <!-- GALLERY -->
-    <section class="p-4">
-      <SiteTitleColorsTag text="GALLERY" textColor="'white" />
+    <section
+      class="p-4 pb-7 border-b-2 border-stone-600 h-[28rem] flex justify-between"
+    >
+      <span class="text-3xl">
+        <SiteTitleColorsTag text="GALLERY" textColor="'white" />
+      </span>
       <hr class="w-52" />
       <Gallery />
       <br />
+      <p>We make custom decals too!</p>
     </section>
 
     <!-- CONTACT US  -->
     <section
-      class="min-h-[45vh] bg-stone-800 text-white flex p-12 justify-center"
+      class="min-h-[45vh] bg-base-dark-purp text-white flex p-12 justify-center"
     >
-      <div class="">
+      <div class="text-3xl">
         <SiteTitleColorsTag text="CONTACT INFO" textColor="white" />
         <hr class="w-52" />
       </div>
@@ -50,14 +73,22 @@ import EtsyIcon from "../../public/etsy-icon.svg";
       <div class="flex flex-col justify-center items-center">
         <br />
         <p>Inquiries</p>
-        <a href="mailto:contact101vinylz@yahoo.com"
+        <a href="mailto:contact101vinylz@yahoo.com" title="Send us an email"
           >contact101vinylz@yahoo.com</a
         >
-        <a href="https://www.etsy.com/shop/101vinylz" class="my-3">
+        <a
+          href="https://www.etsy.com/shop/101vinylz"
+          class="my-3"
+          title="View our shop"
+        >
           <Image src={EtsyIcon} alt="" width="60" />
         </a>
         <p>Browse our shop!</p>
-        <a href="https://www.instagram.com/101vinylz/" class="my-3">
+        <a
+          href="https://www.instagram.com/101vinylz/"
+          class="my-3"
+          title="Follow our Instagram"
+        >
           <Image src={InstaIcon} alt="" width="60" />
         </a>
         <p>Follow us on Instagram!</p>

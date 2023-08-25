@@ -1,27 +1,22 @@
 ---
-
+import SiteTitleColorsTag from "./SiteTitleColorsTag.astro";
 ---
 
 <header
-  class="w-full bg-stone-300 min-h-[5vh] sticky top-0 flex justify-between p-4 items-center border-b border-neutral-300"
+  class="w-full bg-base-dark-purp min-h-[5vh] sticky top-0 flex justify-between p-4 items-center border-b border-base-light-purp z-50"
 >
-  <div>
-    <h1 class="text-3xl md:text-4xl">
-      <span class="text-red-500">1</span><span class="text-orange-500">0</span
-      ><span class="text-red-500">1</span>Vinyl<span class="text-purple-500"
-        >Z</span
-      >
-    </h1>
+  <div class="text-3xl pl-3">
+    <SiteTitleColorsTag text="101VINYLZ" textColor="white" />
   </div>
 
-  <nav class="text-sky-600 font-semibold">
-    <a href="https://www.etsy.com/shop/101vinylz" class="mr-1">Etsy</a>
-    <a href="mailto:contact101vinylz@yahoo.com" class="mr-1">Contact Us</a>
+  <nav class="text-stone-100 font-semibold text-lg">
+    <a
+      href="https://www.etsy.com/shop/101vinylz"
+      class="mr-3"
+      title="View our store">Etsy</a
+    >
+    <a href="mailto:contact101vinylz@yahoo.com" class="mr-3" title="Contact us"
+      >Contact Us</a
+    >
   </nav>
 </header>
-
-<style>
-  h1 {
-    font-family: "Bushidoo", monospace;
-  }
-</style>
