@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+import LightIcon from "../assets/light.svg";
+---
+
+<button
+  class="p-2 rounded border border-slate-500 bg-slate-800 dark:bg-slate-400 fixed bottom-3 right-3 lg:bottom-10 lg:right-10 transition"
+  data-dark-toggle
+>
+  <Image
+    src={LightIcon}
+    alt=""
+    width={30}
+    class="toggle-dark"
+    transition:animate="slide"
+  />
+</button>
+
+<script>
+  import LightIcon from "../assets/light.svg";
+  import DarkIcon from "../assets/dark.svg";
+  const toggle = document.querySelector("[data-dark-toggle]");
+  const icon = toggle?.children[0];
+
+  toggle?.addEventListener("click", () => {
+    const html = document.querySelector("html");
+
+    if (html?.classList.contains("dark")) {
+      // toggle to light
+      icon?.setAttribute("src", DarkIcon.src);
+      html?.classList.remove("dark");
+    } else if (!html?.classList.contains("dark")) {
+      //toggle to dark
+      icon?.setAttribute("src", LightIcon.src);
+      html?.classList.add("dark");
+    }
+  });
+</script>

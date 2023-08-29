@@ -1,11 +1,10 @@
 ---
-const { text, textColor } = Astro.props;
+const { text } = Astro.props;
 
 const title = text || "101VINYLZ";
-const color = textColor || "black";
 ---
 
-<h2 class="" style=`color:${color}`>
+<h2 class="dark:text-white text-black">
   <span class="text-red-500">{title[0]}</span><span class="text-orange-500"
     >{title[1]}</span
   ><span class="text-red-500">{title[2]}</span>{

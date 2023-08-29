@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const images = await Astro.glob("../assets/*").then((files) =>
+const images = await Astro.glob("../assets/gallery/*").then((files) =>
   files.map((file) => file.default),
 );
 ---
