@@ -18,22 +18,26 @@ import LightIcon from "../assets/light.svg";
 </button>
 
 <script>
+  const html = document.querySelector("html");
   import LightIcon from "../assets/light.svg";
   import DarkIcon from "../assets/dark.svg";
   const toggle = document.querySelector("[data-dark-toggle]");
   const icon = toggle?.children[0];
 
-  toggle?.addEventListener("click", () => {
-    const html = document.querySelector("html");
+  if (!html?.classList.contains("dark"))
+    icon?.setAttribute("src", DarkIcon.src);
 
+  toggle?.addEventListener("click", () => {
+    // toggle to light
     if (html?.classList.contains("dark")) {
-      // toggle to light
       icon?.setAttribute("src", DarkIcon.src);
       html?.classList.remove("dark");
+      localStorage.setItem("dark-mode", "false");
     } else if (!html?.classList.contains("dark")) {
       //toggle to dark
       icon?.setAttribute("src", LightIcon.src);
       html?.classList.add("dark");
+      localStorage.setItem("dark-mode", "true");
     }
   });
 </script>

@@ -5,7 +5,6 @@ import { Image, getImage } from "astro:assets";
 import SiteTitleColorsTag from "../components/SiteTitleColorsTag.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Gallery from "../components/Gallery.astro";
-import DarkModeToggle from "../components/DarkModeToggle.astro";
 
 import InstaIcon from "../../public/insta.svg";
 import EtsyIcon from "../../public/etsy-icon.svg";
@@ -104,7 +103,6 @@ const HeroImageHQ = await getImage({
       </div>
     </section>
   </main>
-  <DarkModeToggle />
 </BaseLayout>
 
 <style>
