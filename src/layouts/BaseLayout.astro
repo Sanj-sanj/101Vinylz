@@ -7,7 +7,7 @@ import DarkModeToggle from "../components/DarkModeToggle.astro";
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en" class="">
+<html lang="en" class="bg-base-dark-navy">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -39,6 +39,7 @@ const { pageTitle } = Astro.props;
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{pageTitle}</title>
+    <meta name="theme-color" content="#b25068" />
   </head>
   <body
     class="dark:bg-zinc-900 bg-zinc-300 dark:text-stone-300 transition-colors"

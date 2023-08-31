@@ -6,15 +6,16 @@ const images = await Astro.glob("../assets/gallery/*").then((files) =>
 ---
 
 <div class="w-10/12 min-w-[10/12] h-64">
-  <div class="flex p-2 overflow-auto snap-x snap-mandatory">
+  <div class="flex h-full p-2 overflow-auto snap-x snap-mandatory">
     {
       images.map((item) => (
         <Image
           src={item}
-          class="max-h-[17rem] w-[calc(100%)] snap-center px-6 last:mr-0 scroll-p-[50%]"
+          class="snap-center px-6 last:mr-0 scroll-p-[50%]"
           alt=""
           loading="lazy"
           quality="low"
+          width={265}
         />
       ))
     }
